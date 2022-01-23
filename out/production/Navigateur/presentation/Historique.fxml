@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.HistoriqueController">
+   <top>
+      <HBox prefHeight="91.0" prefWidth="1368.0" style="-fx-background-color: #0066CC;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="idLabelHistorique" text="Historique" textFill="#f2eaea">
+               <HBox.margin>
+                  <Insets left="30.0" right="10.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idRechercheHistorique" prefHeight="48.0" prefWidth="514.0" promptText="Rechercher dans l'historique" style="-fx-background-color: #0033CC;">
+               <HBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox>
+         <HBox fx:id="idHBoxDatePage">
+            <children>
+               <DatePicker fx:id="idRechercheByDateHistorique" onInputMethodTextChanged="#historiqueFilter" onMouseClicked="#historiqueFilter" prefHeight="53.0" prefWidth="225.0">
+                  <HBox.margin>
+                     <Insets left="1000.0" top="20.0" />
+                  </HBox.margin>
+               </DatePicker>
+            </children></HBox>
+         <HBox>
+      <TableView fx:id="idTableHistorique" onMouseMoved="#DeleteBtn" prefHeight="648.0" prefWidth="1265.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="idTimePage" prefWidth="169.0" text="time" />
+            <TableColumn fx:id="idPageName" prefWidth="323.0" text="Page" />
+            <TableColumn fx:id="idPageUrl" prefWidth="601.0" text="Page" />
+            <TableColumn fx:id="idActionSupprimer" prefWidth="171.0" text="Supprimer" />
+         </columns>
+               <HBox.margin>
+                  <Insets left="50.0" top="30.0" />
+               </HBox.margin>
+      </TableView>
+         </HBox>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.DownloadController">
+    <top>
+        <HBox prefHeight="75.0" prefWidth="612.0" style="-fx-background-color: #0066CC;" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Téléchargements" textFill="#f2eaea">
+                    <HBox.margin>
+                        <Insets left="30.0" right="10.0" top="20.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <TextField prefHeight="38.0" prefWidth="384.0" promptText="Rechercher dans les Téléchargements" style="-fx-background-color: #0033CC;">
+                    <HBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <VBox>
+            <HBox fx:id="idDatePage">
+
+            </HBox>
+            <HBox>
+
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

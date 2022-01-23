@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.FavoriController">
+    <top>
+        <HBox prefHeight="101.0" prefWidth="1368.0" style="-fx-background-color: #0066CC;" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Favoris" textFill="#f2eaea">
+                    <HBox.margin>
+                        <Insets left="50.0" top="30.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="idRechercheFavori" prefHeight="48.0" prefWidth="510.0" promptText="Rechercher dans les Favoris" style="-fx-background-color: #0033CC;">
+                    <HBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+    </top>
+    <center>
+
+        <TableView fx:id="idTableFavori" onMouseMoved="#DeleteBtnFavori" prefHeight="283.0" prefWidth="639.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="idPageFavori" prefWidth="1158.0" text="Page" />
+                        <TableColumn fx:id="idActionSupprimerFavori" prefWidth="209.0" text="Supprimer" />
+                    </columns>
+                    <HBox.margin>
+                        <Insets left="40.0" top="30.0" />
+                    </HBox.margin>
+                </TableView>
+    </center>
+</BorderPane>

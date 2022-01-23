@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:id="idBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.Controller">
+   <top>
+      <VBox fx:id="idVBox" prefHeight="96.0" prefWidth="1800.0" style="-fx-background-color: #474749;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="idHBox" alignment="TOP_CENTER" prefHeight="63.0" prefWidth="1800.0" style="-fx-background-color: #474749; -fx-border-width: 0 0 1px 0; -fx-border-color: #333335;">
+               <children>
+                  <Button fx:id="idBack" minWidth="43.0" mnemonicParsing="false" onAction="#back" prefWidth="52.0" style="-fx-background-color: #474749;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="25" style="-fx-background-color: #474749;" textAlignment="CENTER" wrappingWidth="32.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="14.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="idForward" mnemonicParsing="false" onAction="#forward" prefWidth="58.0" style="-fx-background-color: #474749;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_RIGHT" size="25" textAlignment="CENTER" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="14.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="idRefreshPage" mnemonicParsing="false" onAction="#refreshPage" prefWidth="58.0" style="-fx-background-color: #474749;">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="reload" fill="WHITE" glyphName="ROTATE_RIGHT" size="25" textAlignment="CENTER" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="14.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="idGoToHomePage" mnemonicParsing="false" onAction="#goToHomePage" prefWidth="58.0" style="-fx-background-color: #474749;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="28" style="-fx-background-color: #474749;" textAlignment="CENTER" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="12.0" />
+                     </HBox.margin></Button>
+                  <ProgressIndicator fx:id="progress" maxHeight="41.0" maxWidth="76.0" minHeight="41.0" minWidth="16.0" prefHeight="41.0" prefWidth="61.0" style="-fx-background-color: white;" visible="false">
+                     <HBox.margin>
+                        <Insets left="100.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ProgressIndicator>
+                  <TextField fx:id="idTextField" onAction="#actionLoad" prefHeight="41.0" prefWidth="964.0" promptText="Rechercher" style="-fx-border-width: 2px; -fx-border-color: white; -fx-border-radius: 4px;">
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                     <HBox.margin>
+                        <Insets top="12.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="idLoad" mnemonicParsing="false" onAction="#actionLoad" prefHeight="45.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-color: transparent; -fx-border-color: #333335;">
+                     <HBox.margin>
+                        <Insets right="50.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25" textAlignment="CENTER" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="idDownload" mnemonicParsing="false" onAction="#download" prefHeight="41.0" prefWidth="58.0" style="-fx-background-color: #474749;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="DOWNLOAD" size="25" style="-fx-background-color: #474749;" textAlignment="CENTER" wrappingWidth="32.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="50.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="idImprimerPage" mnemonicParsing="false" onAction="#imprimerPage" prefHeight="41.0" prefWidth="58.0" style="-fx-background-color: #474749;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="25" style="-fx-background-color: #474749;" textAlignment="CENTER" wrappingWidth="32.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="idZoomIn" mnemonicParsing="false" onAction="#zoomIn" prefHeight="41.0" prefWidth="58.0" style="-fx-background-color: #474749;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH_PLUS" size="25" style="-fx-background-color: #474749;" textAlignment="CENTER" wrappingWidth="32.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="idZoomOut" mnemonicParsing="false" onAction="#zoomOut" prefHeight="41.0" prefWidth="58.0" style="-fx-background-color: #474749;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH_MINUS" size="25" style="-fx-background-color: #474749;" textAlignment="CENTER" wrappingWidth="32.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="76.0" prefWidth="94.0" style="-fx-border-color: #474749; -fx-border-width: 2px;">
+                     <children>
+                        <Button fx:id="idOption" mnemonicParsing="false" onAction="#option" prefHeight="41.0" prefWidth="58.0" style="-fx-background-color: #474749;">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="REORDER" size="30" style="-fx-background-color: #474749;" textAlignment="CENTER" wrappingWidth="32.0" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <WebView fx:id="idWebView" prefHeight="499.0" prefWidth="775.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="statusL" prefHeight="16.0" prefWidth="662.0" text="Status" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

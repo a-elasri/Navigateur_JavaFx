@@ -1,0 +1,56 @@
+.tab{
+    -fx-pref-height: 40;
+    -fx-background-color: #333335;
+    -fx-padding: 2px 15px 2px 15px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0px 0px 1px;
+}
+.buttonFavori {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.buttonFavori:hover{
+    -fx-background-color: #616161;
+}
+
+#idActionSupprimer .button{
+    -fx-background-color: transparent ;
+}
+.tab:hover{
+    -fx-background-color: rgba(71, 71, 73, 0.82);
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-close-button{
+    -fx-shape: "M19,6.41L17.59,5 12,10.59 6.41,5 5,6.41 10.59,12 5,17.59 6.41,19 12,13.41 17.59,19 19,17.59 13.41,12z";
+    -fx-background-color: white;
+}
+.tab-label {
+    -fx-padding: 0 10px 0 0;
+}
+
+.tab:selected{
+    -fx-background-color: #474749;
+    -fx-border-width: 0 0px 0px 1px;
+
+}
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white ;
+    -fx-font-size: 17px;
+}
+.tab-pane .tab .tab-label {
+    -fx-text-fill: white ;
+    -fx-font-size: 17px;
+}
+
+.addTab{
+    -fx-pref-width: 35;
+    -fx-padding: 0 0 0 10;
+    -fx-text-alignment: CENTER;
+    -fx-background-color: #333335;
+    -fx-border-width: 0px;
+}
+.tab-pane>*.tab-header-area>*.tab-header-background
+{
+    -fx-background-color: #333335;
+    -fx-text-fill: white;
+}
